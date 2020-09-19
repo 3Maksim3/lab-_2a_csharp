@@ -8,14 +8,14 @@ namespace lab_csharp_2a
 {
     class Ctriangles
     {
-        Ctriangle[] ctriangles;
-        internal Ctriangle[] Ctriangles_ { get => ctriangles; set => ctriangles = value; }
-
-        public Ctriangles()
+        Ctriangle[] ctriangles; // Объявление массива обьектов
+        internal Ctriangle[] Ctriangles_ { get => ctriangles; set => ctriangles = value; } // Свойства массива
+        // Конструктор без параметров
+        public Ctriangles() 
         {
 
         }
-
+        // Конструктор заполняющий массив данными
         public Ctriangles(int N)
         {
             Ctriangles_ = new Ctriangle[N];
@@ -29,7 +29,7 @@ namespace lab_csharp_2a
                 Ctriangles_[i].Side3 = random.Next(2, 20);
             }
         }
-
+        // Метод выводящий информацию об массиве
         public void PrintCtriangles()
         {
             int i = 1;
@@ -40,7 +40,7 @@ namespace lab_csharp_2a
             }
 
         }
-
+        // Метод находящий среднее арифметическое всех площадей
         public double findMiddleSquare()
         {
             double middle = 0;
